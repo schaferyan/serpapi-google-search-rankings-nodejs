@@ -78,7 +78,7 @@ async function getAllRankings(keywords) {
   return rankings;
 }
 
-getAllRankings(keywords).then((rankings) => console.log(rankings));
+// getAllRankings(keywords).then((rankings) => console.log(rankings));
 
 // print the keywords and rankings
 async function printKeywordRankings() {
@@ -149,10 +149,10 @@ async function asyncRankingsToCsv() {
       new ObjectsToCsv(rankings).toDisk("./test.csv")
     );
   }
-asyncRankingsToCsv();
+// asyncRankingsToCsv();
 
 // printKeywordRankings();
 // rankingsToCsv();
 
-// asyncPrintKeywordRankings();
-// asyncRankingsToCsv();
+asyncPrintKeywordRankings();
+asyncRankingsToCsv();
