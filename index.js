@@ -85,11 +85,13 @@ async function printKeywordRankings() {
   getAllRankings(keywords).then((rankings) => console.log(rankings));
 }
 
-async function rankingsToCsv() {
+async function rankingsToCsv(keywords) {
   getAllRankings(keywords).then((rankings) =>
     new ObjectsToCsv(rankings).toDisk("./test.csv")
   );
 }
+
+// rankingsToCsv(keywords);
 
 async function getSearchId(keyword) {
   const params = {
@@ -147,6 +149,7 @@ async function asyncRankingsToCsv() {
       new ObjectsToCsv(rankings).toDisk("./test.csv")
     );
   }
+asyncRankingsToCsv();
 
 // printKeywordRankings();
 // rankingsToCsv();
