@@ -12,31 +12,12 @@ You will also need to sign up for a free Serpapi account at https://serpapi.com/
 
 
 Clone this repository, then create your package.json file: 
-npm init
+`npm init`
 
-After this we need to make a few changes to the package.json file. 
 
-You need to add the line type="module" to your package.json.
 
-```
-{
-  "name": "track-google-search-rankings-nodejs",  
-  "version": "1.0.0",  
-  "description": "Track Google Search Rankings with NodeJs and SerpApi",  
-  "type": "module",  
-  "main": "index.js",`  
-```
-
-You can add a start script for convenience:
   
-  ```
-  "scripts": {
-    "start": "node index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },`
-  ```
-  
-Next we need to install our dependencies:
+Install the dependencies:
 
 `npm install serpapi dotenv delay objects-to-csv`
 
@@ -52,4 +33,14 @@ Then create a new file in your project directory called ‘.env’ and add the f
 You should now be able to run the script by typing `npm start` in your terminal.
 
 The rankings should be printed out in your terminal, and `test.csv` should appear in your project directory.
+
+## External Links
+
+If you need help coming up with keywords to check rankings for, try this Python tool which pulls data from Google Autocomplete, People Also Ask and Related Searches and uses it to suggest SEO Keywords:
+
+https://github.com/chukhraiartur/seo-keyword-research-tool
+
+There is also a similar tool available via JavaScript:
+
+https://github.com/chukhraiartur/seo-keyword-research-tool
 
